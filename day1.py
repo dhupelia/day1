@@ -10,6 +10,8 @@ file = open("input.txt", "r")
 total = 0
 num1 = 0
 num2 = 0
+foundnum1 = False
+foundnum2 = False
 
 # Loop through each line of text
 while True:
@@ -24,20 +26,16 @@ while True:
         break
 
     # Iterate through each character from the beginning until you find the first integer and save it as num1
-    while True:
+    while foundnum1 == False:
         for character in nextline:
-            print(character)
+            if foundnum1 == True:
+                foundnum1 = False
+                break
             if character.isdigit():
-                num1 = character
-                print("Found a number!!!", "num1", "\n")
+                num1 = int(character)
+                print("Found a number!!!", num1, "\n")
+                foundnum1 = True
+                total = total + num1
                 break
             
-
-    # Iterate through each character from the end until you find the first integer and save it as num2
-
-    # Output both numbers for my sanity
-    print(num1)
-    print(num2)
-
-    # Add these two integers to our running total
-    total = total + num1 + num2
+    # Iterate through each character from the end until you find the first integer and save it as num2 then add it to total
