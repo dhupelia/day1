@@ -49,7 +49,7 @@ print("\n\n**** The Final Result of Part 1 =", total, " ****\n\n")
 file.close()
 
 # Part 2
-
+'''
 # Re-open the file
 #file = open("input.txt", "r")
 file = open("test_input_part2.txt")
@@ -87,6 +87,7 @@ print("\n\n**** The Final Result of Part 2 =", total, " ****\n\n")
 
 # Close the file and end
 file.close()
+'''
 exit()
 
 
